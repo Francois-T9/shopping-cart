@@ -1,0 +1,42 @@
+.item {
+  background-color: rgb(197, 195, 195);
+  display: flex;
+  flex-direction: column;
+  width: 10em;
+  align-items: center;
+  border-radius: 10px;
+
+  transition: all 200ms ease-out;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+/* .item img {
+  width: 5em;
+} */
+
+.itemImage {
+  width: 5em;
+}
+
+.addToCart {
+  width: 2em;
+}
+
+.priceWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.priceWrapper input {
+  width: 2em;
+  height: 1em;
+}
+
+.priceWrapper img:hover {
+  cursor: pointer;
+}
