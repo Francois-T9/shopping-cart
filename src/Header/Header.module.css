@@ -1,0 +1,46 @@
+.header {
+  padding: 10px;
+  background-color: rgb(192, 166, 253);
+
+  grid-row: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header h1 {
+  grid-column: 1;
+  font-weight: 100;
+}
+
+.header img {
+  width: 2em;
+}
+
+.header li {
+  align-self: center;
+
+  transition: all 100ms ease-out;
+}
+
+.header li:hover {
+  transform: scale(1.2);
+}
+
+.header nav {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+.navbar ul li:hover,
+.navbar img {
+  cursor: pointer;
+}
