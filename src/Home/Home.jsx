@@ -1,30 +1,12 @@
 import React from "react";
 import styles from "./Home.module.css";
-import { Link } from "react-router-dom";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 export default function Home() {
   return (
     <div className={styles.home}>
-      <div className={styles.header}>
-        <h1>
-          Coffee <span>Yeya</span>
-        </h1>
-        <nav className={styles.navbar}>
-          <ul>
-            <li>
-              {" "}
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              {" "}
-              <Link to="shop">Shop</Link>
-            </li>
-            <li>About</li>
-
-            <img src="../src/img/cart-outline.svg" alt="" />
-          </ul>
-        </nav>
-      </div>
+      <Header />
 
       <div className={styles.main}>
         <p>
@@ -38,14 +20,8 @@ export default function Home() {
           alt=""
         />
       </div>
-      <div className={styles.footer}>
-        <div className={styles.socials}>
-          <h2>Siguenos en redes sociales!</h2>
-          <img src="../src/img/icons8-instagram-24.png" alt="" />
-          <img src="../src/img/icons8-tiktok-24.png" alt="" />
-          <img src="../src/img/icons8-facebook-24.png" alt="" />
-        </div>
-      </div>
+
+      <Footer />
     </div>
   );
 }
