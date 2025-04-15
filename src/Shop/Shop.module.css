@@ -8,3 +8,9 @@
   gap: 30px;
   flex-wrap: wrap;
 }
+
+.main button {
+  border: 1px solid black;
+  width: 10em;
+  height: 5em;
+}
