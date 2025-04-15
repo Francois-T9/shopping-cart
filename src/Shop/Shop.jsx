@@ -4,12 +4,12 @@ import styles2 from "../Shop/Shop.module.css";
 import Item from "../Item/Item";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import { useState, useEffect } from "react";
-export default function Shop() {
-  const [cartArray, setCartArray] = useState([]);
+import { Link } from "react-router-dom";
 
+export default function Shop({ setCartArray }) {
   const displaySelectedItem = (itemName, quantity, price) => {
     const total = quantity * price;
+
     console.log(`You bought ${quantity} of ${itemName} for ${total} USD`);
     setCartArray((prevCart) => [
       ...prevCart,
@@ -20,9 +20,7 @@ export default function Shop() {
       },
     ]);
   };
-  useEffect(() => {
-    console.log("Cart updated:", cartArray);
-  }, [cartArray]);
+
   return (
     <div className={styles.home}>
       <Header />
@@ -42,9 +40,13 @@ export default function Shop() {
           ></Item>
           <Item
             itemName="Lungo"
-            itemPrice={4.95}
+            itemPrice={4.99}
             onAddToCart={displaySelectedItem}
           ></Item>
+          <Link to="../cart">
+            {" "}
+            <button>Go to checkout</button>
+          </Link>
         </div>
       </div>
 
