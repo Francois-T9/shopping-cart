@@ -1,0 +1,19 @@
+.button {
+  border: 1px solid black;
+}
+
+.cart {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart button {
+  border: 1px solid black;
+  width: 10em;
+}
+
+.cart button:hover {
+  background-color: antiquewhite;
+}
