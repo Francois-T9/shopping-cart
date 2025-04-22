@@ -5,21 +5,24 @@ import Item from "../Item/Item";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
+import { useCart } from "../CartContext";
+import { useEffect, useState } from "react";
 
-export default function Shop({ setCartArray }) {
-  const displaySelectedItem = (itemName, quantity, price) => {
-    const total = quantity * price;
+export default function Shop() {
+  const { addToCart } = useCart();
+  const [apiItems, setApiItems] = useState([]);
 
-    console.log(`You bought ${quantity} of ${itemName} for ${total} USD`);
-    setCartArray((prevCart) => [
-      ...prevCart,
-      {
-        productName: itemName,
-        quantity: quantity,
-        price: price,
-      },
-    ]);
+  const fetchItemsfromAPI = () => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((json) => setApiItems(json.slice(0, 6)));
   };
+
+  useEffect(() => {
+    fetchItemsfromAPI();
+  }, []);
+
+  console.log(apiItems);
 
   return (
     <div className={styles.home}>
@@ -28,21 +31,16 @@ export default function Shop({ setCartArray }) {
       <div className={styles2.main}>
         <h2>Items</h2>
         <div className={styles2.itemList}>
-          <Item
-            itemName="Espresso"
-            itemPrice={4.95}
-            onAddToCart={displaySelectedItem}
-          ></Item>
-          <Item
-            itemName="Americano"
-            itemPrice={9.99}
-            onAddToCart={displaySelectedItem}
-          ></Item>
-          <Item
-            itemName="Lungo"
-            itemPrice={4.99}
-            onAddToCart={displaySelectedItem}
-          ></Item>
+          {apiItems.map((item) => (
+            <Item
+              key={item.id}
+              itemName={item.title.substring(0, 10)}
+              itemPrice={item.price}
+              pathToImg={item.image}
+              onAddToCart={addToCart}
+            ></Item>
+          ))}
+
           <Link to="../cart">
             {" "}
             <button>Go to checkout</button>
