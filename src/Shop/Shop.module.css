@@ -1,5 +1,5 @@
 .main {
-  background-color: rgb(247, 247, 247);
+  background-color: var(--color5);
   padding: 10px;
 }
 
@@ -13,4 +13,14 @@
   border: 1px solid black;
   width: 10em;
   height: 5em;
+  background-color: var(--color2);
+}
+
+.main button:hover {
+  background-color: var(--color3);
+}
+
+.main p {
+  border: 1px solid black;
+  padding: 10px;
 }

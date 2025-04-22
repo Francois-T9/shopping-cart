@@ -1,10 +1,12 @@
 .item {
-  background-color: rgb(197, 195, 195);
+  background-color: var(--color4);
   display: flex;
   flex-direction: column;
   width: 10em;
+  height: 15em;
   align-items: center;
   border-radius: 10px;
+  gap: 10px;
 
   transition: all 200ms ease-out;
 }
@@ -13,12 +15,15 @@
   transform: scale(1.1);
 }
 
-/* .item img {
+.item h2 {
   width: 5em;
-} */
+  height: 2em;
+  font-size: 0.8em;
+}
 
 .itemImage {
   width: 5em;
+  height: 7em;
 }
 
 .addToCart {
@@ -36,7 +41,21 @@
   width: 2em;
   height: 1em;
 }
+.priceWrapper p {
+  width: 4em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.priceWrapper img {
+  transition: all 100ms ease-out;
+}
 
 .priceWrapper img:hover {
   cursor: pointer;
+}
+
+.priceWrapper img:active {
+  transform: scale(1.5);
 }

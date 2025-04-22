@@ -1,4 +1,4 @@
 .footer {
-  background-color: rgb(192, 166, 253);
+  background-color: var(--color2);
   padding: 10px;
 }
