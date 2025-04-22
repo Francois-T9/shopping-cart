@@ -6,16 +6,10 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
-import { useEffect } from "react";
+import { useCart } from "../CartContext";
 
-export default function Cart({
-  cartArray,
-  removeItemFromCart,
-  removeAllItems,
-}) {
-  useEffect(() => {
-    console.log("Cart updated:", cartArray); // Log to confirm the re-render
-  }, [cartArray]);
+export default function Cart() {
+  const { cartArray, removeItemFromCart, removeAllCartItems } = useCart();
 
   if (cartArray.length == 0) {
     return (
@@ -46,7 +40,7 @@ export default function Cart({
             removeItem={removeItemFromCart}
           />
         ))}
-        <button onClick={removeAllItems}>Remove all items</button>
+        <button onClick={removeAllCartItems}>Remove all items</button>
       </div>
       <Footer />
     </div>
