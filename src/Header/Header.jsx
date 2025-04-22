@@ -18,7 +18,7 @@ export default function Header() {
             {" "}
             <Link to="../shop">Shop</Link>
           </li>
-          <li>About</li>
+
           <li>
             <Link to="/cart">
               <img src="../src/img/cart-outline.svg" alt="Cart" />
