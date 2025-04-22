@@ -11,7 +11,7 @@ export default function CartItem({ itemName, quantity, price, removeItem }) {
     <div className={styles.cartItem}>
       <h4>{itemName}</h4>
       <p>Quantity : {quantity}</p>
-      <p>{totalPrice}</p>
+      <p>{totalPrice.toFixed(2)}</p>
       <img
         src="../src/img/delete.svg"
         alt=""
