@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import styles from "./Header.module.css";
 export default function Header() {
@@ -12,17 +13,36 @@ export default function Header() {
         <ul>
           <li>
             {" "}
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : undefined
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
             {" "}
-            <Link to="../shop">Shop</Link>
+            <NavLink
+              to="../shop"
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : undefined
+              }
+            >
+              Shop
+            </NavLink>
           </li>
 
           <li>
-            <Link to="/cart">
-              <img src="../src/img/cart-outline.svg" alt="Cart" />
-            </Link>
+            <NavLink
+              to="/cart"
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : undefined
+              }
+            >
+              <img src="../src/img/icons8-shopping-cart-32.png" alt="Cart" />
+            </NavLink>
           </li>
         </ul>
       </nav>
