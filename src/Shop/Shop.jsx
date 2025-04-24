@@ -6,23 +6,10 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 import { useCart } from "../CartContext";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-export default function Shop() {
+export default function Shop({ apiItems }) {
   const { addToCart } = useCart();
-  const [apiItems, setApiItems] = useState([]);
-
-  const fetchItemsfromAPI = () => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((json) => setApiItems(json.slice(0, 6)));
-  };
-
-  useEffect(() => {
-    fetchItemsfromAPI();
-  }, []);
-
-  console.log(apiItems);
 
   return (
     <div className={styles.home}>
@@ -41,10 +28,10 @@ export default function Shop() {
             ></Item>
           ))}
 
-          <Link to="../cart">
+          {/* <Link to="../cart">
             {" "}
             <button>Go to checkout</button>
-          </Link>
+          </Link> */}
         </div>
       </div>
 
