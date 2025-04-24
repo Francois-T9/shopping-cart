@@ -6,6 +6,10 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  height: 8em;
+  align-items: center;
+  /* position: sticky;
+  top: 0; */
 }
 
 .header h1 {
@@ -14,7 +18,9 @@
 }
 
 .header img {
-  width: 2em;
+  width: 2.5em;
+  justify-self: center;
+  align-self: center;
 }
 
 .header li {
@@ -23,8 +29,25 @@
   transition: all 100ms ease-out;
 }
 
+.header li a {
+  color: var(--color5);
+}
+
 .header li:hover {
   transform: scale(1.2);
+}
+
+/* .header li:hover a {
+  background-color: rgba(255, 255, 255, 0.1);
+} */
+.activeLink {
+  background-color: var(--color2);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  /* color: var(--color2); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header nav {
@@ -37,7 +60,7 @@
   text-decoration: none;
   list-style-type: none;
   display: flex;
-  gap: 10px;
+  gap: 30px;
 }
 
 .navbar ul li:hover,

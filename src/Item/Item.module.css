@@ -1,14 +1,16 @@
 .item {
-  background-color: var(--color4);
+  background-color: white;
   display: flex;
   flex-direction: column;
-  width: 10em;
+  width: 12em;
   height: 15em;
   align-items: center;
   border-radius: 10px;
   gap: 10px;
 
   transition: all 200ms ease-out;
+
+  border: 2px solid var(--color2);
 }
 
 .item:hover {
@@ -40,6 +42,18 @@
 .priceWrapper input {
   width: 2em;
   height: 1em;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color5);
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid var(--color2);
+}
+
+.priceWrapper input::-webkit-inner-spin-button {
+  cursor: pointer; /* Add pointer cursor to the spin buttons */
 }
 .priceWrapper p {
   width: 4em;
@@ -47,6 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--color2);
 }
 .priceWrapper img {
   transition: all 100ms ease-out;

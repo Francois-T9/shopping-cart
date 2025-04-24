@@ -1,20 +1,24 @@
-.home {
-  display: flex;
-
-  width: 100vw;
-
-  display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
-}
-
 .main {
   background-color: var(--color5);
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 40em;
+  animation: fadeInUp 0.3s ease-in-out;
 }
 
 .main img {
   width: 15em;
   border-radius: 20px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

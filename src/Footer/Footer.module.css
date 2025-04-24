@@ -1,4 +1,35 @@
 .footer {
   background-color: var(--color2);
   padding: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer p,
+.footer img {
+  cursor: pointer;
+}
+.footer img {
+  width: 2.5em;
+}
+
+.company {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.products {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.help {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.socials {
+  grid-column: 4;
+  grid-row: 1;
 }
