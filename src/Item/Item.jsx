@@ -40,7 +40,7 @@ export default function Item({
         ) : (
           <img
             className={styles.addToCart}
-            src="../src/img/cart-arrow-down.svg"
+            src="public/img/cart-arrow-down.svg"
             alt=""
             onClick={() => {
               onAddToCart(itemName, itemQuantity, itemPrice, pathToImg);

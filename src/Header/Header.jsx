@@ -41,7 +41,7 @@ export default function Header() {
                 isActive ? styles.activeLink : undefined
               }
             >
-              <img src="../src/img/icons8-shopping-cart-32.png" alt="Cart" />
+              <img src="public/img/icons8-shopping-cart-32.png" alt="Cart" />
             </NavLink>
           </li>
         </ul>

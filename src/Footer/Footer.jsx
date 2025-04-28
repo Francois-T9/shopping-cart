@@ -6,11 +6,11 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.socials}>
         <h3>Redes sociales</h3>
-        <img src="../src/img/icons8-instagram-24.png" alt="Instagram" />
-        <img src="../src/img/icons8-tiktok-24.png" alt="TikTok" />
-        <img src="../src/img/icons8-facebook-24.png" alt="Facebook" />
+        <img src="public/img/icons8-instagram-24.png" alt="Instagram" />
+        <img src="public/img/icons8-tiktok-24.png" alt="TikTok" />
+        <img src="public/img/icons8-facebook-24.png" alt="Facebook" />
 
-        <img src="../src/img/github (1).svg" alt="Twitter" />
+        <img src="public/img/github (1).svg" alt="Twitter" />
       </div>{" "}
       <div className={styles.products}>
         <h3>Nuestros productos</h3>

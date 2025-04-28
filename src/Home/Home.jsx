@@ -24,7 +24,7 @@ export default function Home() {
           aut accusantium voluptates!
         </p>
         <img
-          src="../src/img/pexels-aysenurhamra-68268085-10338179.jpg"
+          src="public/img/pexels-aysenurhamra-68268085-10338179.jpg"
           alt=""
         />
       </div>
