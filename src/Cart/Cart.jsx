@@ -9,10 +9,14 @@ import { useCart } from "../CartContext";
 
 export default function Cart() {
   const { cartArray, removeItemFromCart, removeAllCartItems } = useCart();
+  const subtotal = cartArray.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
 
   if (cartArray.length == 0) {
     return (
-      <div className={styles.main}>
+      <div>
         <Header />
         <div className={styles.cart}>
           <div className="cart-items">
@@ -26,11 +30,11 @@ export default function Cart() {
             <h3>Bill</h3>
             <div className="bill-fields">
               <p>Subtotal</p>
-              <p>0$</p>
+              <p>{subtotal}</p>
             </div>
             <div className="bill-fields">
               <p>Shipping</p>
-              <p>0$</p>
+              <p>4.99 $</p>
             </div>
             <div className="bill-fields">
               <p>Total</p>
@@ -44,20 +48,23 @@ export default function Cart() {
     );
   }
   return (
-    <div className={styles.main}>
+    <div>
       <Header />
       <div className={styles.cart}>
         <div className={styles.cartItems}>
           <h3>Your cart: </h3>
+
           {cartArray.map((item) => (
             <CartItem
               key={item.productName}
               itemName={item.productName}
+              itemImg={item.srcImg}
               quantity={item.quantity}
               price={item.price}
               removeItem={removeItemFromCart}
             />
           ))}
+
           <button onClick={removeAllCartItems}>Remove all items</button>
         </div>
 
@@ -65,15 +72,15 @@ export default function Cart() {
           <h3>Bill</h3>
           <div className="bill-fields">
             <p>Subtotal</p>
-            <p>0$</p>
+            <p>{subtotal.toFixed(2)} $</p>
           </div>
           <div className="bill-fields">
             <p>Shipping</p>
-            <p>0$</p>
+            <p>4.99 $</p>
           </div>
           <div className="bill-fields">
             <p>Total</p>
-            <p>0$</p>
+            <p>{(subtotal + 4.99).toFixed(2)} $</p>
           </div>
           <button>Checkout</button>
         </div>
