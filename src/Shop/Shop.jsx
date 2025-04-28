@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../Home/Home.module.css";
 import styles2 from "../Shop/Shop.module.css";
 import Item from "../Item/Item";
 import Header from "../Header/Header";
@@ -12,7 +11,7 @@ export default function Shop({ apiItems }) {
   const { addToCart } = useCart();
 
   return (
-    <div className={styles.home}>
+    <div>
       <Header />
 
       <div className={styles2.main}>
