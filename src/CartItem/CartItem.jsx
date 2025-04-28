@@ -22,7 +22,7 @@ export default function CartItem({
       <p>Quantity : {quantity}</p>
       <p>{totalPrice.toFixed(2)}</p>
       <img
-        src="public/img/delete.svg"
+        src="/img/delete.svg"
         alt=""
         onClick={() => {
           removeItem(itemName);

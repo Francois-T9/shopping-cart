@@ -23,10 +23,7 @@ export default function Home() {
           recusandae nam? Perspiciatis nisi voluptate magni, fugiat architecto
           aut accusantium voluptates!
         </p>
-        <img
-          src="public/img/pexels-aysenurhamra-68268085-10338179.jpg"
-          alt=""
-        />
+        <img src="/img/pexels-aysenurhamra-68268085-10338179.jpg" alt="" />
       </div>
 
       <Footer />
