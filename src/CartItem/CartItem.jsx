@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./CartItem.module.css";
 
-export default function CartItem({ itemName, quantity, price, removeItem }) {
+export default function CartItem({
+  itemName,
+  itemImg,
+  quantity,
+  price,
+  removeItem,
+}) {
   const totalPrice = quantity * price;
 
   // const deleteItemFromCart = () => {
@@ -9,7 +15,10 @@ export default function CartItem({ itemName, quantity, price, removeItem }) {
   // };
   return (
     <div className={styles.cartItem}>
-      <h4>{itemName}</h4>
+      <div className={styles.itemImageContainer}>
+        <h4>{itemName}</h4>
+        <img src={itemImg} alt="" />
+      </div>
       <p>Quantity : {quantity}</p>
       <p>{totalPrice.toFixed(2)}</p>
       <img

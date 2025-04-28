@@ -4,6 +4,7 @@ const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cartArray, setCartArray] = useState([]);
+  // const [addedToCart, setAddedToCart] = useState(false);
 
   const removeItemFromCart = (itemName) => {
     setCartArray((prevCart) =>
@@ -15,7 +16,8 @@ export function CartProvider({ children }) {
     setCartArray([]);
   };
 
-  const addToCart = (itemName, quantity, price) => {
+  const addToCart = (itemName, quantity, price, srcImg) => {
+    // setAddedToCart(true);
     setCartArray((prevCart) => {
       const existing = prevCart.find((item) => item.productName === itemName);
       if (existing) {
@@ -25,7 +27,7 @@ export function CartProvider({ children }) {
             : item
         );
       }
-      return [...prevCart, { productName: itemName, quantity, price }];
+      return [...prevCart, { productName: itemName, quantity, price, srcImg }];
     });
   };
 

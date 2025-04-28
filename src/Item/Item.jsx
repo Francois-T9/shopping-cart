@@ -1,14 +1,18 @@
 import styles from "../Item/Item.module.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+// import { useCart } from "../CartContext";
 
 export default function Item({
-  itemName = "Espresso",
+  itemName,
 
-  itemPrice = 10,
-  pathToImg = "../src/img/file-document-alert.svg",
+  itemPrice,
+  pathToImg,
   onAddToCart,
 }) {
   const [itemQuantity, setItemQuantity] = useState(1);
+  // const { addedToCart } = useCart();
+  const [addedToCart, setAddedToCart] = useState(false);
 
   const getInputQuantity = (e) => {
     const q = e.target.value;
@@ -27,14 +31,23 @@ export default function Item({
           onChange={getInputQuantity}
         />
         <p>{itemPrice}$</p>
-        <img
-          className={styles.addToCart}
-          src="../src/img/cart-arrow-down.svg"
-          alt=""
-          onClick={() => {
-            onAddToCart(itemName, itemQuantity, itemPrice);
-          }}
-        />
+        {/* If no item in cart */}
+        {addedToCart ? (
+          <Link to="../cart">
+            {" "}
+            <button>Go to cart</button>
+          </Link>
+        ) : (
+          <img
+            className={styles.addToCart}
+            src="../src/img/cart-arrow-down.svg"
+            alt=""
+            onClick={() => {
+              onAddToCart(itemName, itemQuantity, itemPrice, pathToImg);
+              setAddedToCart(true);
+            }}
+          />
+        )}
       </div>
     </div>
   );
