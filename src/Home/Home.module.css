@@ -3,7 +3,7 @@
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 40em;
+  height: 100vh;
   animation: fadeInUp 0.3s ease-in-out;
 }
 
@@ -20,5 +20,15 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsivity for mobiles */
+@media (max-width: 430px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: auto;
   }
 }

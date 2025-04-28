@@ -6,6 +6,7 @@
   border: 1px solid black;
   width: 30em;
   padding: 1px 10px;
+  background-color: white;
 }
 
 .cartItem img {
@@ -14,4 +15,23 @@
 
 .cartItem img:hover {
   cursor: pointer;
+}
+
+.itemImageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemImageContainer img {
+  width: 5em;
+}
+
+@media (max-width: 430px) {
+  .cartItem {
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+  }
 }
