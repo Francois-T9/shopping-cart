@@ -23,11 +23,25 @@
   grid-row: 1;
   grid-column: 1;
   width: 100vw;
+  background-color: var(--color5);
+}
+
+.cart p {
+  font-size: 1.3rem;
+}
+
+.cart h1,
+h2,
+h3,
+h4 {
+  font-size: 2rem;
 }
 
 .cart button {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 10em;
+  font-size: 1.2rem;
+  background-color: var(--color3);
 }
 
 .cart button:hover {
@@ -50,13 +64,15 @@
 }
 
 .bill button {
-  background-color: green;
-  color: white;
+  width: 10em;
+  font-size: 1.2rem;
+  background-color: var(--color3);
+  /* color: white; */
   border: none;
   font-weight: 700;
 }
 .bill button:hover {
-  background-color: rgb(5, 187, 5);
+  background-color: var(--color4);
 }
 
 .cartItems {

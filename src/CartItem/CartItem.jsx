@@ -16,7 +16,7 @@ export default function CartItem({
   return (
     <div className={styles.cartItem}>
       <div className={styles.itemImageContainer}>
-        <h4>{itemName}</h4>
+        <p>{itemName}</p>
         <img src={itemImg} alt="" />
       </div>
       <p>Quantity : {quantity}</p>

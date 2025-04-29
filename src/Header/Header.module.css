@@ -1,6 +1,7 @@
 .header {
   padding: 10px;
   background-color: var(--color1);
+  /* font-family: "Cal sans"; */
 
   grid-row: 1;
   width: 100%;
@@ -8,8 +9,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   height: 10em;
   align-items: center;
-  /* position: sticky;
-  top: 0; */
+  /* position: sticky; */
+  /* top: 0; */
 }
 
 .header h1 {
@@ -18,6 +19,10 @@
 }
 
 .header img {
+  width: 15em;
+}
+
+.navbar img {
   width: 2.5em;
   justify-self: center;
   align-self: center;
@@ -25,6 +30,7 @@
 
 .header li {
   align-self: center;
+  font-size: 1.3rem;
 
   transition: all 100ms ease-out;
 }

@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Tuffy";
   line-height: 1.5;
   font-weight: 400;
 
@@ -12,11 +12,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color1: #8d6e63;
-  --color2: #a1887f;
-  --color3: #d7ccc8;
-  --color4: #bcaaa4;
-  --color5: #efebe9;
+  --color1: #b4bf5e;
+  --color2: #592816;
+  --color3: #d9936a;
+  --color4: #f2a0be;
+  --color5: #f2e4dc;
+}
+:root h1,
+h2,
+h3,
+h4 {
+  font-family: "Cal sans";
 }
 
 a {
