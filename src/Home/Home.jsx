@@ -9,21 +9,39 @@ export default function Home() {
       <Header />
 
       <div className={styles.main}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, hic
-          repellendus incidunt doloribus beatae quasi eos labore similique nulla
-          laboriosam exercitationem ea corrupti ipsam quaerat voluptatem
-          blanditiis porro culpa itaque voluptate totam non molestiae eum! Sunt
-          libero explicabo eveniet, autem commodi aliquam quidem similique non
-          vitae fuga at deserunt culpa ex qui, beatae expedita ad perspiciatis
-          molestias dolor dolorem eaque dolorum odit ratione. Rerum ex
-          dignissimos nostrum esse repudiandae perferendis, eos natus, ut
-          exercitationem impedit similique inventore error officia. Consequuntur
-          odio aspernatur velit. Magni nulla ipsum vero obcaecati exercitationem
-          recusandae nam? Perspiciatis nisi voluptate magni, fugiat architecto
-          aut accusantium voluptates!
-        </p>
-        <img src="/img/pexels-aysenurhamra-68268085-10338179.jpg" alt="" />
+        <div className={styles.sectionOne}>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+            est adipisci praesentium enim optio tempora, laudantium,
+            consequuntur ratione magni libero, molestias quos modi qui? Nobis
+            eius neque omnis rem nostrum deserunt esse pariatur totam optio ut
+            dolorem, temporibus ex necessitatibus? Est assumenda asperiores
+            velit culpa quod laudantium dignissimos minus. Delectus.
+          </p>
+          <img src="/img/image1.png" alt="" />
+        </div>
+        <div className={styles.sectionTwo}>
+          <img src="/img/image2.png" alt="" />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+            est adipisci praesentium enim optio tempora, laudantium,
+            consequuntur ratione magni libero, molestias quos modi qui? Nobis
+            eius neque omnis rem nostrum deserunt esse pariatur totam optio ut
+            dolorem, temporibus ex necessitatibus? Est assumenda asperiores
+            velit culpa quod laudantium dignissimos minus. Delectus.
+          </p>
+        </div>
+        <div className={styles.sectionThree}>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+            est adipisci praesentium enim optio tempora, laudantium,
+            consequuntur ratione magni libero, molestias quos modi qui? Nobis
+            eius neque omnis rem nostrum deserunt esse pariatur totam optio ut
+            dolorem, temporibus ex necessitatibus? Est assumenda asperiores
+            velit culpa quod laudantium dignissimos minus. Delectus.
+          </p>
+          <img src="/img/image5.png" alt="" />
+        </div>
       </div>
 
       <Footer />
