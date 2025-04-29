@@ -6,9 +6,7 @@ import styles from "./Header.module.css";
 export default function Header() {
   return (
     <div className={styles.header}>
-      <h1>
-        Coffee <span>Yeya</span>
-      </h1>
+      <img src="/img/image6.png" alt="" />
       <nav className={styles.navbar}>
         <ul>
           <li>
