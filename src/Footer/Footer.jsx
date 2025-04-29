@@ -14,9 +14,9 @@ export default function Footer() {
       </div>{" "}
       <div className={styles.products}>
         <h3>Nuestros productos</h3>
-        <p>Playeras</p>
-        <p>Collares</p>
-        <p>Pantalones</p>
+        <p>Té matcha</p>
+        <p>Macarrons</p>
+        <p>Café gourmand</p>
       </div>
       <div className={styles.help}>
         <h3>Ayuda</h3>
