@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color5);
+}
+
 .main {
   background-color: var(--color5);
   padding: 10px;
@@ -6,7 +12,9 @@
   grid-template-rows: 1fr 1fr 1fr;
   /* height: 100vh; */
   height: auto;
+  width: 75%;
   animation: fadeInUp 0.3s ease-in-out;
+  gap: 20px;
   /* 
   background-image: url("/img/image1.png");
   opacity: 0.; */
@@ -20,9 +28,11 @@
 .sectionThree {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
   animation: scroll linear;
   animation-timeline: view();
   animation-range: entry 0 cover 40%;
+  justify-items: center;
 }
 
 .sectionOne {
