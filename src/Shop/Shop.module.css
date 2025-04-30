@@ -1,12 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color5);
+  padding: 0;
+  width: 100vw;
+}
 .main {
   background-color: var(--color5);
   padding: 10px;
-  height: 40em;
-  animation: fadeInUp 0.3s ease-in-out;
+  /* height: 40em; */
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   height: auto;
+  width: 75%;
+  animation: fadeInUp 0.3s ease-in-out;
+  justify-content: center;
 }
 @keyframes fadeInUp {
   from {
@@ -23,6 +32,7 @@
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  /* justify-content: center; */
 }
 
 .main button {

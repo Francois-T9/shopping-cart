@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   background-color: var(--color5);
+  padding: 0;
+  width: 100vw;
 }
 
 .main {
@@ -12,9 +14,11 @@
   grid-template-rows: 1fr 1fr 1fr;
   /* height: 100vh; */
   height: auto;
-  width: 75%;
+  align-items: center;
+  /* justify-items: center; */
+  width: 75vw;
   animation: fadeInUp 0.3s ease-in-out;
-  gap: 20px;
+  /* gap: 20px; */
   /* 
   background-image: url("/img/image1.png");
   opacity: 0.; */
