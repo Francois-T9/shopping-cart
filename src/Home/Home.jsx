@@ -8,7 +8,6 @@ export default function Home() {
     <div>
       <Header />
       <div className={styles.container}>
-
         <div className={styles.main}>
           <div className={styles.sectionOne}>
             <p>
@@ -45,7 +44,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
 
       <Footer />
     </div>
