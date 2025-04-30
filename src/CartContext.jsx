@@ -31,11 +31,23 @@ export function CartProvider({ children }) {
     });
   };
 
+  const updateCartQuantity = (itemName, e) => {
+    const newQuantity = e.target.value;
+    setCartArray((prevCart) =>
+      prevCart.map((item) =>
+        item.productName === itemName
+          ? { ...item, quantity: newQuantity }
+          : item
+      )
+    );
+  };
+
   const value = {
     cartArray,
     removeItemFromCart,
     removeAllCartItems,
     addToCart,
+    updateCartQuantity,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
