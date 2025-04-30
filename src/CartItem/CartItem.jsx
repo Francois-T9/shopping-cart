@@ -7,20 +7,27 @@ export default function CartItem({
   quantity,
   price,
   removeItem,
+  updateCartQuantity,
 }) {
   const totalPrice = quantity * price;
 
-  // const deleteItemFromCart = () => {
-  //   console.log(`You deleted the item ${itemName}`);
-  // };
   return (
     <div className={styles.cartItem}>
       <div className={styles.itemImageContainer}>
         <p>{itemName}</p>
         <img src={itemImg} alt="" />
       </div>
-      <p>Quantity : {quantity}</p>
-      <p>{totalPrice.toFixed(2)}</p>
+      {/* <p>Quantity : {quantity}</p> */}
+      <input
+        type="number"
+        defaultValue={quantity}
+        onChange={(e) => {
+          updateCartQuantity(itemName, e);
+        }}
+        min={1}
+        max={9}
+      />
+      <p>{totalPrice.toFixed(2)} $</p>
       <img
         src="/img/delete.svg"
         alt=""
